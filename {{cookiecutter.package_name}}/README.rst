@@ -20,15 +20,14 @@
 Usage
 -----
 
-
-
+{% if cookiecutter.readme_pypi_badge -%}
 testpypi:
     twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 travis:
     check
 readthedocs
  # connect
-
+{%- endif %}
 
 
 Installation
