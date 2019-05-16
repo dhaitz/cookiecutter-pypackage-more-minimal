@@ -1,17 +1,16 @@
 {
     "author_name": "Dominik Haitz",
     "author_email": "dominik.haitz at ...",
+    "username": "dhaitz",
 
     "package_name": "my_new_project",
     "package_version": "0.1.0",
     "package_description": "A new Python package",
-    "package_url": "https://github.com/dhaitz/my-new-project",
+    "package_url": "https://github.com/{{ cookiecutter.username }}/{{ cookiecutter.package_name.replace('_', '-') }}",
 
     "readme_in_markdown": true,
 
     "readme_pypi_badge": true,
 
-    "create_travis_file": true,
-    "readme_travis_badge": true,
-    "readme_travis_url": "https://travis-ci.org/dhaitz/my-new-project"
+    "add_travis": true
 }

@@ -24,8 +24,8 @@ def remove(filepath):
 
 if __name__ == '__main__':
 
-    create_travis_file = '{{cookiecutter.create_travis_file}}' in TRUE_ANSWERS
-    if not create_travis_file:
+    add_travis = '{{cookiecutter.add_travis}}' in TRUE_ANSWERS
+    if not add_travis:
         filepath = '.travis.yml'
         remove(filepath)
 

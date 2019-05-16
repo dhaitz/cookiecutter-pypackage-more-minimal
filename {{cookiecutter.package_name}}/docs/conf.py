@@ -22,7 +22,7 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
 
-import {{ cookiecutter.package_name }}
+import {{ cookiecutter.package_name.replace('-', '_') }}
 
 # -- General configuration ---------------------------------------------
 

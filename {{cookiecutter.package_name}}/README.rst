@@ -7,9 +7,11 @@
     :alt: Latest PyPI version
 {%- endif %}
 
-{% if cookiecutter.readme_travis_badge -%}
-.. image:: {{ cookiecutter.readme_travis_url }}.png
-   :target: {{ cookiecutter.readme_travis_url }}
+{% if cookiecutter.add_travis -%}
+
+""
+.. image:: https://travis-ci.org/{{ cookiecutter.username }}/{{ cookiecutter.package_name.replace('_', '-') }}.png
+   :target: https://travis-ci.org/{{ cookiecutter.username }}/{{ cookiecutter.package_name.replace('_', '-') }}
    :alt: Latest Travis CI build status
 {%- endif %}
 
