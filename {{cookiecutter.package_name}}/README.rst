@@ -23,12 +23,17 @@ Usage
 {% if cookiecutter.add_pypi -%}
 testpypi:
     twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+{%- endif %}
+
+{% if cookiecutter.add_travis -%}
 travis:
     check
+{%- endif %}
+
+{% if cookiecutter.add_extended_documentation -%}
 readthedocs
  # connect
 {%- endif %}
-
 
 Installation
 ------------
