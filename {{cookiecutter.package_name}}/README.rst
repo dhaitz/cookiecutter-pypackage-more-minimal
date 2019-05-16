@@ -1,7 +1,7 @@
 {{ cookiecutter.package_name }}
 {{ cookiecutter.package_name|count * "=" }}
 
-{% if cookiecutter.readme_pypi_badge -%}
+{% if cookiecutter.add_pypi -%}
 .. image:: https://img.shields.io/pypi/v/{{ cookiecutter.package_name }}.svg
     :target: https://pypi.python.org/pypi/{{ cookiecutter.package_name }}
     :alt: Latest PyPI version
@@ -20,7 +20,7 @@
 Usage
 -----
 
-{% if cookiecutter.readme_pypi_badge -%}
+{% if cookiecutter.add_pypi -%}
 testpypi:
     twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 travis:

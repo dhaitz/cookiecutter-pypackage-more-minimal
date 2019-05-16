@@ -10,7 +10,7 @@
 
     "add_extended_documentation": false,
 
-    "readme_pypi_badge": true,
+    "add_pypi": false,
 
     "add_travis": false
 }
