@@ -2,12 +2,12 @@
     "author_name": "Dominik Haitz",
     "author_email": "dominik.haitz at ...",
 
-    "package_name": "cookiecutter_pypackage_minimal",
+    "package_name": "my_new_project",
     "package_version": "0.1.0",
-    "package_description": "An opinionated, minimal cookiecutter template for Python packages",
-    "package_url": "https://github.com/dhaitz/cookiecutter-pypackage-minimal",
+    "package_description": "A new Python package",
+    "package_url": "https://github.com/dhaitz/my-new-project",
 
     "readme_pypi_badge": true,
     "readme_travis_badge": true,
-    "readme_travis_url": "https://travis-ci.org/borntyping/cookiecutter-pypackage-minimal"
+    "readme_travis_url": "https://travis-ci.org/dhaitz/my-new-project"
 }
