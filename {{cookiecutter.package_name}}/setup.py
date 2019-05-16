@@ -15,8 +15,7 @@ setup(
     author_email="{{ cookiecutter.author_email }}",
 
     description="{{ cookiecutter.package_description }}",
-    long_description=Path('README.md').open().read(),
-    long_description_content_type="text/markdown",
+    long_description=Path('README.rst').open().read(),
 
     packages=["{{ cookiecutter.package_name }}"],
 
