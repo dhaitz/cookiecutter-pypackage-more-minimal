@@ -14,6 +14,15 @@
    :alt: Latest Travis CI build status
 {%- endif %}
 
+{% if cookiecutter.add_extended_documentation -%}
+
+.. image:: https://readthedocs.org/projects/{{ cookiecutter.package_name }}/badge/?version=stable
+   :target: http://{{ cookiecutter.package_name }}.pypa.io/en/stable/?badge=stable
+   :alt: Documentation Status
+
+{%- endif %}
+
+
 {{ cookiecutter.package_description }}
 
 Usage
