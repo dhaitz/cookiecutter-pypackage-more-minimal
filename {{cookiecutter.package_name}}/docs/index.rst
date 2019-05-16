@@ -1,4 +1,4 @@
-Welcome to {{ cookiecutter.package_names }}'s documentation!
+Welcome to {{ cookiecutter.package_name }}'s documentation!
 ======================================
 
 .. toctree::
@@ -9,9 +9,6 @@ Welcome to {{ cookiecutter.package_names }}'s documentation!
    installation
    usage
    modules
-   contributing
-   {% if cookiecutter.create_author_file == 'y' -%}authors
-   {% endif -%}history
 
 Indices and tables
 ==================
