@@ -8,9 +8,9 @@
     "package_description": "A new Python package",
     "package_url": "https://github.com/{{ cookiecutter.username }}/{{ cookiecutter.package_name.replace('_', '-') }}",
 
-    "readme_in_markdown": true,
+    "add_extended_documentation": false,
 
     "readme_pypi_badge": true,
 
-    "add_travis": true
+    "add_travis": false
 }

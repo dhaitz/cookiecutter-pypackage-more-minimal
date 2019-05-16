@@ -22,6 +22,7 @@ def remove(filepath):
     else:
         print("Cannot remove", filepath)
 
+
 if __name__ == '__main__':
 
     add_travis = '{{cookiecutter.add_travis}}' in TRUE_ANSWERS
@@ -29,8 +30,11 @@ if __name__ == '__main__':
         filepath = '.travis.yml'
         remove(filepath)
 
-    # convert README.rst to .md
-    if '{{cookiecutter.readme_in_markdown}}' in TRUE_ANSWERS:
+    if '{{cookiecutter.add_extended_documentation}}' not in TRUE_ANSWERS:
+        # convert README.rst to .md
         readme_md = pypandoc.convert('README.rst', 'md', format='rst')
         Path('README.md').open('w').write(readme_md)
         remove('README.rst')
+
+        # remove docs folder
+        remove('docs')
