@@ -18,6 +18,17 @@
 Usage
 -----
 
+
+
+testpypi:
+    twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+travis:
+    check
+readthedocs
+ # connect
+
+
+
 Installation
 ------------
 

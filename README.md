@@ -10,4 +10,5 @@ Differences to [kragniz/cookiecutter-pypackage-minimal](https://github.com/kragn
 - No tox
 - Extended `.gitignore`
 
+Docs template from [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage)
 See also [kennethreitz/samplemod](https://github.com/kennethreitz/samplemod)
