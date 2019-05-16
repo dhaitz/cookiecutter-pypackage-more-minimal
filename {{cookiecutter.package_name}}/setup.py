@@ -1,16 +1,8 @@
-import io
-import os
-import re
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-from setuptools import find_packages
 from setuptools import setup
-
-
-def read(filename):
-    filename = os.path.join(os.path.dirname(__file__), filename)
-    text_type = type(u"")
-    with io.open(filename, mode="r", encoding='utf-8') as fd:
-        return re.sub(text_type(r':[a-z]+:`~?(.*?)`'), text_type(r'``\1``'), fd.read())
+from pathlib import Path
 
 
 setup(
@@ -23,22 +15,21 @@ setup(
     author_email="{{ cookiecutter.author_email }}",
 
     description="{{ cookiecutter.package_description }}",
-    long_description=read("README.rst"),
+    long_description=Path('README.md').open().read(),
+    long_description_content_type="text/markdown",
 
-    packages=find_packages(exclude=('tests',)),
+    packages=["{{ cookiecutter.package_name }}"],
 
-    install_requires=[],
+    # Derive version from git. If HEAD is at the tag, the version will be the tag itself.
+    version_config={
+        "version_format": "{tag}.dev{sha}",
+        "starting_version": "0.0.1"
+    },
+    setup_requires=Path('requirements.txt').open().read(),
 
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
         'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
     ],
+    zip_safe=False,
 )
