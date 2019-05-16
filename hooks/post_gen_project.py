@@ -7,6 +7,11 @@
 
 import os
 import shutil
+from pathlib import Path
+import pypandoc
+
+# ToDo is there a better way to check for truth?
+TRUE_ANSWERS = ['True', True, 'y', 'true', 'yes']
 
 
 def remove(filepath):
@@ -17,11 +22,15 @@ def remove(filepath):
     else:
         print("Cannot remove", filepath)
 
-
 if __name__ == '__main__':
 
-    create_travis_file = '{{cookiecutter.create_travis_file}}' == 'y'
-
+    create_travis_file = '{{cookiecutter.create_travis_file}}' in TRUE_ANSWERS
     if not create_travis_file:
         filepath = '.travis.yml'
         remove(filepath)
+
+    # convert README.rst to .md
+    if '{{cookiecutter.readme_in_markdown}}' in TRUE_ANSWERS:
+        readme_md = pypandoc.convert('README.rst', 'md', format='rst')
+        Path('README.md').open('w').write(readme_md)
+        remove('README.rst')

@@ -7,6 +7,8 @@
     "package_description": "A new Python package",
     "package_url": "https://github.com/dhaitz/my-new-project",
 
+    "readme_in_markdown": true,
+
     "readme_pypi_badge": true,
 
     "create_travis_file": true,
