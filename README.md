@@ -1,6 +1,8 @@
 # cookiecutter-pypackage-more-minimal
 
-Differences to https://github.com/kragniz/cookiecutter-pypackage-minimal:
+Simple cookiecutter template for python packages.
+
+Differences to [kragniz/cookiecutter-pypackage-minimal](https://github.com/kragniz/cookiecutter-pypackage-minimal):
 
 - Create `.travis.yml` conditionally
 - Choose between markdown or reStructuredText for `README`
@@ -8,3 +10,4 @@ Differences to https://github.com/kragniz/cookiecutter-pypackage-minimal:
 - No tox
 - Extended `.gitignore`
 
+See also [kennethreitz/samplemod](https://github.com/kennethreitz/samplemod)
