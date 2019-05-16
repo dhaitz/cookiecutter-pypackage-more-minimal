@@ -8,6 +8,8 @@
     "package_url": "https://github.com/dhaitz/my-new-project",
 
     "readme_pypi_badge": true,
+
+    "create_travis_file": true,
     "readme_travis_badge": true,
     "readme_travis_url": "https://travis-ci.org/dhaitz/my-new-project"
 }
