@@ -15,7 +15,11 @@ setup(
     author_email="{{ cookiecutter.author_email }}",
 
     description="{{ cookiecutter.package_description }}",
+{%- if cookiecutter.add_extended_documentation %}
     long_description=Path('README.rst').open().read(),
+{% else -%}
+    long_description=Path('README.md').open().read(),
+{% endif -%}
 
     packages=["{{ cookiecutter.package_name }}"],
 
