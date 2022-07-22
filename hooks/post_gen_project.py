@@ -32,7 +32,7 @@ if __name__ == '__main__':
 
     if '{{cookiecutter.add_extended_documentation}}' not in TRUE_ANSWERS:
         # convert README.rst to .md
-        readme_md = pypandoc.convert('README.rst', 'md', format='rst')
+        readme_md = pypandoc.convert_file('README.rst', 'md', format='rst')
         Path('README.md').open('w').write(readme_md)
         remove('README.rst')
 
